@@ -1,0 +1,37 @@
+.tooltip-arrow {
+    display: inline;
+    background-color: #000;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+
+}
+.tooltip-content {
+    opacity: 	0;
+    transition: opacity 0.15s ease-in;
+    position: absolute;
+    top: 1.8rem;
+    right: -7rem;
+    width: 14rem;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  
+}
+:host([openned]) .tooltip-content {
+    display: block;
+    opacity: 1;
+}
+
+:host {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-size: 1rem;
+}

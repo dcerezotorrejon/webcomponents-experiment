@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+</head>
+<body>
+    <template id='icon-tooltip-template'>
+        <span data-tooltip-icon>(?) </span><slot></slot>
+    </template>
+    <dc-tooltip data-text="Este es el texto personalizado para el tooltip">
+        This Webcomponent is great
+    </dc-tooltip><br><br>
+    <dc-tooltip data-default-template="true">
+        This Webcomponent is great
+    </dc-tooltip><br>
+
+    <a is="dc-confirm-link" href="https://www.iberia.com/es/es/">Test enlace</a>
+
+</body>
+</html>

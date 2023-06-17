@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/stencil01.esm.js"></script>
+    <script nomodule src="/build/stencil01.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .side-nav ul {
+        list-style: none;
+      }
+      .side-nav a {
+        text-decoration: none;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="openBtn">Open drawer</button>
+    <dc-side-drawer title="Título">
+      <ul class="side-nav">
+        <li><a href="/">Link 1</a></li>
+        <li><a href="/">Link 2</a></li>
+        <li><a href="/">Link 3</a></li>
+        <li><a href="/">Link 4</a></li>
+      </ul>
+    </dc-side-drawer>
+    <br/>
+    <dc-tooltip>
+      <span>This is a better tooltip</span>
+      <span slot="tooltip-content">This is a tooltip content</span>
+    </dc-tooltip>
+
+    <script>
+      const btn = document.querySelector('#openBtn');
+      const drawer = document.querySelector('dc-side-drawer')
+      btn.addEventListener('click', () => {
+        drawer.open();
+      });
+    </script>
+  </body>
+</html>
